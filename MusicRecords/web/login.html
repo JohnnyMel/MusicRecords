@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+         function validate()
+        {
+        var u=document.forms["form"]["user"].value;
+        var p=document.forms["form"]["pass"].value;
+        if((u.length==0 || u.length > 20) && (p.length==0 || p.length > 20))
+        {
+            document.getElementById("user").style.color="red";
+            document.getElementById("pass").style.color="red";
+            document.getElementById("errmsg").innerHTML="Error: No input or too many characters";
+            return false;
+        }
+        if (u.length==0 || u.length > 20)
+        {
+            document.getElementById("user").style.color="red";
+            document.getElementById("errmsg").innerHTML="Error: No input or too many characters";
+            return false;
+        }
+        if(p.length==0 || p.length > 20)
+        {
+            document.getElementById("pass").style.color="red";
+            document.getElementById("errmsg").innerHTML="Error: No input or too many characters";
+            return false;
+        }
+        }    
+        </script>   
+        <title>Login</title>
+        <style>
+            body
+            {
+                background-color: white;
+            }
+            h1
+            {
+                color: black;
+            }
+            label
+            {
+                color: black;
+            }
+            input[type = "submit"]
+            {
+                background-color: yellow;
+                color: white;
+                border-color: yellow;
+                
+            }
+        </style>
+    </head>
+       <body>
+           <div style="text-align: center">
+                <h2>Login</h2>
+                
+                <img src="lock.png" width="324" height="324">
+                
+                <p id="errmsg" style="font-size: small; color: red"> </p>
+                <form name="form" method="post" action="login.jsp" onsubmit="return validate()">
+                    <table align="center">    
+                        <tr>
+                            <td>
+                                <label id="user">Username: </label>
+                            </td>
+                            <td>
+                                <input type="text" name="user">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label id="pass">Password: </label>
+                            </td>
+                            <td>
+                                <input type="password" name="pass">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <input type="submit" value="Submit">
+                            </td>
+                        </tr>
+                    </table>  
+               </form>
+           
+            </div>
+       
+    </body>
+</html>

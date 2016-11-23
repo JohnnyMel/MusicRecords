@@ -156,7 +156,7 @@ CREATE TABLE `musician` (
 
 LOCK TABLES `musician` WRITE;
 /*!40000 ALTER TABLE `musician` DISABLE KEYS */;
-INSERT INTO `musician` VALUES (22222,'Dave','Gahan','London','5551348464','dave','1234'),(735489448,'Zakk','Wylde','Los Angeles','5255787964','zakk','123456'),(1035489448,'John','Meletiou','Athens','2105787964','john','1234'),(1111111111,'Adele','Adkins','London','4235464845','adele','1234');
+INSERT INTO `musician` VALUES (22222,'Dave','Gahan','London','5551348464','dave','1234'),(735489448,'Zakk','Wylde','Los Angeles','5255787964','zakk','123456'),(1035489448,'John','Papas','Athens','2105787964','john','1234'),(1111111111,'Adele','Adkins','London','4235464845','adele','1234');
 /*!40000 ALTER TABLE `musician` ENABLE KEYS */;
 UNLOCK TABLES;
 
